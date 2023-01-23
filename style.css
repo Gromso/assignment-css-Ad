@@ -1,0 +1,31 @@
+
+
+
+ /*Tekst svih adresa koje upucuju na neke od adresa koje pripadaju sajtu Google obojiti u zeleno*/
+a[href^="https://www.google"]{
+    color: green;
+}
+
+/* Tekst koji upucuje na LINK group web obojiti u crveno*/
+a[href$="group.eu/"]{
+    color: red;
+}
+
+/* Paragrafe unutar second-div elementa naizmenicno obojiti u crvenu i plavu boju*/
+#second-div > p:nth-child(even){
+    color: red;
+}
+#second-div > p:nth-child(odd){
+    color: blue;
+}
+
+/* Na kraju paragrafa 2 i 3 koriscenjem CSS-a dodati takes -NEW zute boje*/
+#first-div >p:nth-child(2)::after, #first-div >p:nth-child(3)::after{
+    content: " NEW";
+    color: yellow;
+}
+
+/* Prelaskom misa preko Paragraph 10 elementa, njegov tekst treba da postane italic!!*/
+p:nth-child(8):hover{
+    font-style: italic;
+}
